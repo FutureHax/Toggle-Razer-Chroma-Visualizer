@@ -1,18 +1,15 @@
-# Razer Chroma Connect Quick Toggles
+# Razer Chroma Visualizer Toggler
 
-This program allows you to setup hotkeys for toggling the various Chroma Connect Modules - Chroma Streamer Companion, Chroma Visualizer on and off.
-This is helpful since the Chroma apps take precedence over your profiles. For example, when the Streamer Companion is controlling your Emote display, you lose your animated profiles for your other devices such as your keyboard. 
+This litte program allows you to toggle your Razer Chrome Visualizer by pressing a Key.
 
 ## Features
 - Toggling your Razer Chroma Visualizer with only one button on or off
-- Toggling your Razer Streamer Companion with only one button on or off
-- The program will be absolutely invisible while execution
+- The Program will be absolutely invisible while execution
 - No performance loss
 - No background tasks
 
 ## Requirements
-- Razer Synapse 3.0
-- Razer Chroma Visualizer or Razer Streaming Companion 
+- Razer Synapse and Razer Chroma Visualizer
 - .NET Framework version 4.7.2 only needed if you want to edit the source
 - Windows
 
@@ -26,9 +23,9 @@ The setup of the program can be done in two different ways
 5. Click on the "execute program" tab and set the value to the path of the .exe file
 6. Enjoy
 ### Method Two:
-1. Clone the repository using `git clone https://github.com/FutureHax/Toggle-Razer-Chroma-Visualizer`
+1. Clone the repository using `git clone https://github.com/JannesStroehlein/Toggle-Razer-Chroma-Visualizer`
 2. Open the Visual Studio Solution file (.sln) in Visual Studio (not Visual Studio Code)
 3. Set the Build Configuration the "Release"
 4. Hit `CTRL + B` to build the solution
-5. Now perform method 1 beginning at step 3
+5. Now perform method 1 from step 3
 6. Enjoy
