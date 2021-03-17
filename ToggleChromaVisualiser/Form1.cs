@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,23 +20,24 @@ namespace ToggleChromaVisualiser
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            bool isrunning = false;
-            string pathtorun = @"C:\Program Files (x86)\Razer\Synapse3\AudioVisualizer\ChromaVisualizer.exe";
+            string appEngine = @"C:\Program Files\Razer\RzAppEngine\rzappengine.exe";
+            string streamerCompanionArguments = " --url-params=apps=streamer-companion-app --disable-background-timer-throttling";
 
             Process[] allprocesses = Process.GetProcesses();
             for (int i = 0; i < allprocesses.Length; i++)
             {
-                if (allprocesses[i].ProcessName.Contains("ChromaVisualizer"))
+                if (allprocesses[i].ProcessName.Contains("rzappengine"))
                 {
-                    isrunning = true;
                     allprocesses[i].Kill();
-                    break;
+                    this.Close();
+                    return;
                 }
             }
-            if (isrunning == false)
             {
                 Process startit = new Process();
-                startit.StartInfo.FileName = pathtorun;
+                startit.StartInfo.FileName = appEngine;
+                startit.StartInfo.Arguments = streamerCompanionArguments;
+                startit.StartInfo.WindowStyle = ProcessWindowStyle.Minimized;
                 startit.Start();
             }
             this.Close();
